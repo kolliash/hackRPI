@@ -33,3 +33,7 @@ h1 {
     cursor: pointer;
     border-radius: 10px;
  }
+
+ .resizedTextbox {
+   width: 500px; height: 100px
+}
