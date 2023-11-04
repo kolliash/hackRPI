@@ -2,15 +2,10 @@
 <html lang="en">
 
 <head>
-   <title>MyMedSync</title>
-   <meta charset="UTF-8" />
-   <meta viewport="width=device-width, initial-scale=1.0" />
-   <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
-   <script type="text/javascript" src="projects.js"></script>
-   <link rel="stylesheet" href="css.css" type="text/css" />
-</head>
-
-<body>
+    <title>MyMedSync</title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
     <header>
         <h1>MyMedSync</h1>
         <ul class="header">
@@ -20,50 +15,80 @@
             <li><a href="MyDoctors.html" class="button">My Doctors</a></li>
         </ul>
     </header>
+</head>
 
-    <button type="button" id="addNewMed">Add New Medication</button>
+<body>
+
+    </div>
+    <button type="button" id="toggleInfo1">Prednisone</button>
+    <button type="button" id="toggleInfo2">Claritin</button>
+    <button type="button" id="toggleInfo3">Iron Tablets</button>
 
     <div id="medsGeneral">
-        <div id="med1">Prednisone
-            <p>this is info</p>
-        </div>
-        <div id="med2">Claritin</div>
-        <div id="med3">Iron Tablets</div>
-    </div>
-    <div id="showHideBlock">
-        <div id="showHideLinks">
-           <a href="#" id="toggleText">Toggle Text</a>
-           <a href="#" id="hideText">Hide Text</a> |
-           <a href="#" id="showText">Show Text</a>
-        </div>
-        <p>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-           ullamcorper metus sit amet velit ultrices quis congue nisl mollis.
-           Proin nec orci eget nisl vehicula elementum. Vestibulum ante ipsum
-           primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-           Phasellus lacinia dui sed diam tempor volutpat. Aliquam rutrum, urna
-           vel dictum posuere, lacus magna imperdiet ligula, a imperdiet tellus
-           sapien ac tellus. Sed bibendum adipiscing euismod. Phasellus sed
-           adipiscing libero. Donec ut arcu tortor, non fringilla magna.
-           Suspendisse vel ante arcu. Quisque ut dolor eget sem varius rhoncus
-           fringilla ac ipsum. Nullam eget erat augue, consequat laoreet tellus.
-           In et aliquet neque. Maecenas in erat turpis, id porta lectus. Sed
-           vulputate, turpis vel pharetra tincidunt, quam nisi lacinia massa,
-           sit amet hendrerit dolor mauris sed quam. Cras et eros sed nulla
-           posuere sodales.
-        </p>
-        <p>
-           Nunc vel lectus a mi suscipit cursus vitae vel metus. Ut vitae mauris
-           sed magna malesuada facilisis quis at urna. Fusce sit amet ullamcorper
-           lectus. Proin interdum orci et est cursus consectetur convallis mauris
-           placerat. Duis bibendum felis vel sapien auctor consequat. Fusce
-           rutrum aliquet eros, interdum egestas neque ultricies quis. Aliquam
-           erat volutpat. Nulla facilisi. Morbi pharetra hendrerit mattis.
-           Praesent vel gravida odio. Vestibulum ultricies ante eu lorem
-           tincidunt eu facilisis odio fermentum.
-        </p>
-     </div>
-    
-</body>
+        <h2 id="med1">Prednisone</h2>
+        <h3 class="med-info1">
+            <button type="button" id="when1">When to use</button>
+                <p class="when1text">hello this is text</p>
+            <p id="1info1">When to use</p>
+            <p id="1info2">Importance</p>
+            <p id="1info3">Warning</p>
+        </h3>
 
+        <h2 id="med2">Claritin</h2>
+        <h3 class="med-info2">
+            <p id="2info1">When to use</p>
+            <p id="2info2">Importance</p>
+            <p id="2info3">Warning</p>
+        </h3>
+
+        <h2 id="med3">Iron Tablets</h2>
+        <h3 class="med-info3">
+            <p id="3info1">When to use</p>
+            <p id="3info2">Importance</p>
+            <p id="3info3">Warning</p>
+        </h3>
+    </div>
+
+    <script>
+        
+        $(document).ready(function () {
+            $("#toggleInfo1").click(function () {
+                $(".med-info1").toggle();
+            });
+
+            $("#toggleInfo2").click(function () {
+                $(".med-info2").toggle();
+            });
+
+            $("#toggleInfo3").click(function () {
+                $(".med-info3").toggle();
+            });
+
+            // $("#when1").click(function () {
+            //     $(".when1text").toggle();
+            // });
+
+        // Initially, set a variable to keep track of the state
+        let isHidden = true;
+
+        // Hide the element initially
+        $(".when1text").hide();
+
+        $("#when1").click(function () {
+            // Check the state using an if statement
+            if (isHidden) {
+                // If it's hidden, show the element
+                $(".when1text").show();
+                isHidden = false; // Update the state
+            } else {
+                // If it's visible, hide the element
+                $(".when1text").hide();
+                isHidden = true; // Update the state
+            }
+        });
+
+
+        });
+    </script>
+</body>
 </html>
