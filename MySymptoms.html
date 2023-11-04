@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <title>MyMedSync</title>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <link href="css.css" rel="stylesheet" type="text/css" />
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="projects.js"></script>
+</head>
+
+<body>
     <header>
         <h1>MyMedSync</h1>
         <ul class="header">
@@ -15,22 +19,25 @@
             <li><a href="MyDoctors.html" class="button">My Doctors</a></li>
         </ul>
     </header>
-</head>
 
-<body>
-    <div>
-        <button onclick="checkMentalHealth()">How are you feeling mentally?</button>
-        <label class="field">Comments:</label>
-            <div class="value"><textarea rows="4" cols="40"  name="comments" id="comments" onfocus="clearText();" onblur="defaultText();" onsubmit="return validate(this);">Please enter your comments</textarea> </div>
-          
+    <button type="button" id="toggleInfo">Toggle Info</button>
+
+    <div id="medsGeneral">
+        <div id="med1">Prednisone</div>
+        <p class="med-info">This is information about Prednisone.</p>
+        <div id="med2">Claritin</div>
+        <p class="med-info">This is information about Claritin.</p>
+        <div id="med3">Iron Tablets</div>
+        <p class="med-info">This is information about Iron Tablets.</p>
     </div>
-    <div>
-        <button onclick="checkPhysicalHealth()">How are you feeling physically?</button>
-    </div>
-    <div>
-        <button onclick="checkEmotionalHealth()">How are you feeling emotionally?</button>
-    </div>
-    
+
+    <script>
+        $(document).ready(function () {
+            $("#toggleInfo").click(function () {
+                $(".med-info").toggle();
+            });
+        });
+    </script>
 </body>
 
 </html>
