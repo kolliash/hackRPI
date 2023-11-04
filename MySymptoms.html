@@ -7,6 +7,8 @@
     <title>MyMedSync</title>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <link href="css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+   <script type="text/javascript" src="mySymptoms.js"></script>
     <header>
         <h1>MyMedSync</h1>
         <ul class="header">
@@ -20,22 +22,46 @@
 
 <body>
     <div>
-        <button onclick="checkMentalHealth()">How are you feeling mentally?</button>
+        <h3>Mood Scale</h3>
+        <img src = "/faces.jpg" alt = "Mood Scale" width ="150" height ="50">
+        <br>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+    </div>
+    <br>
+    <div>
+        <button onclick="checkMentalHealth()">How are you feeling mentally?  </button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
     </div>
 
         <div>
-        <button onclick="checkPhysicalHealth()">How are you feeling physically?</button>
+        <button onclick="checkPhysicalHealth()">How are you feeling physically?  </button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
     </div>
     <div>
-        <button onclick="checkEmotionalHealth()">How are you feeling emotionally?</button>
+        <button onclick="checkEmotionalHealth()">How are you feeling emotionally?  </button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
     </div>
 
     <label>Comments:</label>
-    <div class="value"><textarea rows="4" cols="40"  name="comments" id="comments" onfocus="clearText();" onblur="defaultText();" onsubmit="return validate(this);">Please enter your comments</textarea> </div>
-      
-
-
+    <div><textarea rows="4" cols="40"  name="comments" id="comments" onfocus="clearText();" onblur="defaultText();" onsubmit="return validate(this);">Please enter your comments</textarea> </div>
     
+   
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 function clearText() {
     var currenttext = document.getElementById("comments");
-
+console.log("hello")
     if (currenttext.value == "Please enter your comments") {
         currenttext.value = "";
     }
