@@ -20,7 +20,9 @@
 <body>
     <div>
         <button onclick="checkMentalHealth()">How are you feeling mentally?</button>
-        <p>   </p>
+        <label class="field">Comments:</label>
+            <div class="value"><textarea rows="4" cols="40"  name="comments" id="comments" onfocus="clearText();" onblur="defaultText();" onsubmit="return validate(this);">Please enter your comments</textarea> </div>
+          
     </div>
     <div>
         <button onclick="checkPhysicalHealth()">How are you feeling physically?</button>
