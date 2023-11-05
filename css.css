@@ -1,29 +1,34 @@
 .header {
-    border-top: 2px solid #a9f2e7;
-    border-bottom: 2px solid #d5f5f0;
-    padding: 0;
+    border-top: 2px solid #1e3d59;
+    border-bottom: 2px solid #1e3d59;
     margin: 0;
     text-align: center;
-    background-color: #00ae94;
+    background-color: #1e3d59;
     white-space: nowrap;
+    color: #1e3d59;
+    background-color: #d9a5b3;
+    padding: 10px;
  }
  .header li {
     display: inline;
     list-style: none;
     margin: 0 1em;
+    color: #1e3d59;
  }
 
 h1 {
-    background-color: #00e7c4;
+    color: #1e3d59;
+    background-color: #f5f0e1;
     text-align: center;
     margin: 0;
     padding: 0;
     font-variant: small-caps;
+    
  }
  .button {
-    background-color: #ffffff;
-    border: 1px solid black;
-    color: rgb(0, 0, 0);
+    color: #1e3d59;
+    background-color: #f5f0e1;
+    border: 1px solid #f5f0e1;
     padding: 8px 10px;
     text-align: center;
     text-decoration: none;
@@ -36,4 +41,77 @@ h1 {
 
  .resizedTextbox {
    width: 500px; height: 100px
+}
+html, body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+    background-color: #c6d7eb;
+    color: #1e3d59; 
+}
+
+ul.header li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a.button {
+    background-color: #1868ae;
+    color: #fbffeb;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #1868ae;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#medsGeneral {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+h2 {
+    color: #1868ae;
+}
+h3 {
+    display: none;
+}
+
+[type="button"] {
+    background-color: #d9a5b3;
+    color: #1e3d59; 
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+p {
+    color: #1e3d59; 
+}
+
+.med-info1, .med-info2, .med-info3 {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+[type="button"]:hover {
+    background-color: #b1d2ef;
+    color: #0b62ae;
+}
+[type="button"]:hover + h3 {
+    display: block;
 }

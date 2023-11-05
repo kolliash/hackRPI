@@ -6,6 +6,8 @@
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <link href="css.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="project.js"></script>
+
     <header>
         <h1>MyMedSync</h1>
         <ul class="header">
@@ -27,68 +29,45 @@
     <div id="medsGeneral">
         <h2 id="med1">Prednisone</h2>
         <h3 class="med-info1">
-            <button type="button" id="when1">When to use</button>
-                <p class="when1text">hello this is text</p>
-            <p id="1info1">When to use</p>
-            <p id="1info2">Importance</p>
-            <p id="1info3">Warning</p>
+            <div type="button" id="when1">When to use</div>
+                <p class="when1text">Take 10 mg (2 tablets) at breakfast; 
+                    Take 5 mg (1 tablet) at lunch; Take 5 mg (1 tablet) at dinner; 
+                    Take 10 mg (2 tablets) at bedtime.</p>
+            <div type="button" id="importance1">Importance</div>
+                <p class="importance1text">This is used when you have a flare-up of your symptoms or an asthma attack. 
+                    This should be a short course to deal with symptoms</p>
+            <div type="button" id="warning1">Warning</div>
+                <p class="warning1text">Take prednisone with breakfast so it does not upset your stomach. Taking prednisolone in the morning also means 
+                    it's less likely to affect your sleep</p>
         </h3>
+
 
         <h2 id="med2">Claritin</h2>
         <h3 class="med-info2">
-            <p id="2info1">When to use</p>
-            <p id="2info2">Importance</p>
-            <p id="2info3">Warning</p>
+            <div type="button" id="when2">When to use</div>
+                <p class="when2text">Claritin products are
+                     non-drowsy and can be taken at any time.</p>
+            <div type="button" id="importance2">Importance</div>
+                <p class="importance2text">Claritin is used to treat sneezing, runny nose, watery eyes, hives, skin rash, hay fever, itching, 
+                    and other cold or allergy symptoms</p>
+            <div type="button" id="warning2">Warning</div>
+                <p class="warning2text">Claritin side effects are typically
+                     mild and can be managed at home.</p>
         </h3>
 
-        <h2 id="med3">Iron Tablets</h2>
+        <h2 id="med3">Iron Pills</h2>
         <h3 class="med-info3">
-            <p id="3info1">When to use</p>
-            <p id="3info2">Importance</p>
-            <p id="3info3">Warning</p>
+            <div type="button" id="when3">When to use</div>
+                <p class="when3text">Iron is best absorbed when taken on an empty stomach, with water or fruit juice (adults: full glass or 8 ounces; children: ½ glass or 4 ounces), 
+                    about 1 hour before or 2 hours after meals.</p>
+            <div type="button" id="importance3">Importance</div>
+                <p class="importance3text">Preventing and treating different
+                     types of anemia caused by low iron levels.</p>
+            <div type="button" id="warning3">Warning</div>
+                <p class="warning3text">Iron supplements can cause stomach cramps, nausea, and diarrhea in some people. You may need to take iron 
+                    with a small amount of food to avoid this problem.</p>
         </h3>
     </div>
 
-    <script>
-        
-        $(document).ready(function () {
-            $("#toggleInfo1").click(function () {
-                $(".med-info1").toggle();
-            });
-
-            $("#toggleInfo2").click(function () {
-                $(".med-info2").toggle();
-            });
-
-            $("#toggleInfo3").click(function () {
-                $(".med-info3").toggle();
-            });
-
-            // $("#when1").click(function () {
-            //     $(".when1text").toggle();
-            // });
-
-        // Initially, set a variable to keep track of the state
-        let isHidden = true;
-
-        // Hide the element initially
-        $(".when1text").hide();
-
-        $("#when1").click(function () {
-            // Check the state using an if statement
-            if (isHidden) {
-                // If it's hidden, show the element
-                $(".when1text").show();
-                isHidden = false; // Update the state
-            } else {
-                // If it's visible, hide the element
-                $(".when1text").hide();
-                isHidden = true; // Update the state
-            }
-        });
-
-
-        });
-    </script>
 </body>
 </html>
